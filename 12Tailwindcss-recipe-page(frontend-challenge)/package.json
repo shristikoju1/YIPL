@@ -1,0 +1,20 @@
+{
+  "name": "recipe-page-main",
+  "version": "1.0.0",
+  "description": "Recipe page coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx postcss css/input.css -o css/output.css",
+    "watch": "npx postcss css/input.css -o css/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

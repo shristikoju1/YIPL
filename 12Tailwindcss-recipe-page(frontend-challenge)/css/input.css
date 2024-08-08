@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-width{
+    @apply max-w-[1440px] pt-[4rem] pb-0 pl-[4rem] pr-[4rem] m-auto;
+}
+
+.custom-list-number {
+    @apply list-none;
+    counter-reset: list-counter;
+  }
+  
+  .custom-list-number li {
+    @apply relative pl-3;
+    counter-increment: list-counter;
+  }
+  
+  .custom-list-number li::before {
+    content: counter(list-counter) '. '; 
+    color: #7b284f;
+    font-weight: bold;
+    position: absolute;
+    left: -2em;
+    top: 0; 
+  }
+
+  .flex-wrap-container {
+    @apply flex flex-row xl:flex-row gap-x-0.5; 
+  }
+  
+  .flex-wrap-container span {
+    @apply inline-flex font-bold font-outfit text-color-stone-dark xl:w-auto xl:inline-flex whitespace-nowrap;
+  }
+  
+  
+  .flex-wrap-container p {
+    @apply font-outfit text-base xl:ml-2 xl:mt-0; 
+    @apply flex-grow; 
+    overflow-wrap: break-word; 
+  }
