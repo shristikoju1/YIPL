@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banking website</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-color-primary text-color-white tracking-wider">
+  <header>
+    <nav class="container flex justify-between items-center">
+      <div class="py-5 text-color-secondary font-bold text-3xl">
+        <a href="#home"> <span class="text-color-white">Light</span>Code. </a>
+      </div>
+      <div>
+        <ul class="hidden lg:flex items-center space-x-6">
+          <li>
+            <a href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a>
+          </li>
+          <li>
+            <a href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a>
+          </li>
+          <li>
+            <a href="#testimonials" class="hover:text-color-secondary ease-in duration-200">Testimonials</a>
+          </li>
+          <li>
+            <a href="#pricing" class="hover:text-color-secondary ease-in duration-200">Pricing</a>
+          </li>
+          <li>
+            <a href="#blog" class="hover:text-color-secondary ease-in duration-200">Blog</a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a>
+          </li>
+
+          <li>
+            <button class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80">
+              Free Trial
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+        <ul class="h-full grid place-items-center py-20">
+          <li>
+            <a id="hLink" href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a>
+          </li>
+          <li>
+            <a id="hLink" href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a>
+          </li>
+          <li>
+            <a id="hLink" href="#testimonials" class="hover:text-color-secondary ease-in duration-200">Testimonials</a>
+          </li>
+          <li>
+            <a id="hLink" href="#pricing" class="hover:text-color-secondary ease-in duration-200">Pricing</a>
+          </li>
+          <li>
+            <a id="hLink" href="#blog" class="hover:text-color-secondary ease-in duration-200">Blog</a>
+          </li>
+          <li>
+            <a id="hLink" href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a>
+          </li>
+
+          <li>
+            <button class="btn">Free Trial</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="relative">
+      <div class="blob1"></div>
+      <div class="blob2"></div>
+      <div class="container py-20">
+        <div class="flex flex-col items-center z-20 md:flex-row">
+          <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+            <h1 class="title mb-4">Awesome App for Your Financial</h1>
+            <p class="leadimg-relaxed mb-10">
+              This simplifies budgeting and tracking, empowering users to
+              manage their finances effortlessly and achieve their financial
+              goals.
+            </p>
+            <button class="btn">Download App</button>
+          </div>
+
+          <div class="md:w-1/2">
+            <img src="./assests/hero4.png" alt="hero" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="bg-color-primary-light">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">Our Future</h4>
+          <h2 class="title">Easy To Manage Your All Payments By Our App</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+              <i class="fa-solid fa-calendar-days text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold py-4">Expense Trackering</h3>
+            <p class="leading-relaxed">We use an appliation designed a testing gnose to keep away.</p>
+          </div>
+
+          <div
+            class="bg-color-primary border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-transparent ease-in duration-200">
+            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+              <i class="fa-solid fa-calendar-days text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold py-4">Expense Trackering</h3>
+            <p class="leading-relaxed">We use an appliation designed a testing gnose to keep away.</p>
+          </div>
+
+          <div
+            class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+              <i class="fa-solid fa-calendar-days text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold py-4">Expense Trackering</h3>
+            <p class="leading-relaxed">We use an appliation designed a testing gnose to keep away.</p>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="saving-money">
+
+      <div class="container py-20 relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <div class="mb-12 md:w-1/2">
+            <img src="./assests/hero3.png" alt="hero3">
+          </div>
+          <div class="text-center md:text-left md:w-1/2 md:ml-20">
+            <h4 class="font-bold text-color-secondary mb-4">Saving Money</h4>
+            <h2 class="title mb-4">Best Financing App to Save Your Money</h2>
+            <p class="leading-relaxed mb-10">
+              The best financing app to save your money is Mint. It integrates seamlessly with your bank accounts,
+              credit cards, and investments, offering real-time updates on your spending and personalized savings tips.
+              With powerful budgeting tools and bill tracking features, Mint helps you set financial goals, avoid late
+              fees, and make informed decisions to maximize your savings.
+            </p>
+            <button class="btn">Read more</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="bg-color-primary-light">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">How it Works</h4>
+          <h2 class="title">Grow Up Your Money saving</h2>
+        </div>
+
+        <div class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0 md:space-x-6">
+
+
+          <div class="text-center cursor-pointer">
+            <div
+              class="relative bg-color-primary-dark inline-block px-6 py-3 rounded-lg cursor-pointer hover:bg-color-secondary ease-in duration-200">
+              <p class="text-6xl custom-after1">1</p>
+            </div>
+
+            <h3 class="text-xl font-bold py-4">Install the App</h3>
+            <p class="leading-relaxed">We use an appliation designed a testing gnose to keep away.</p>
+          </div>
+
+
+          <div class="text-center cursor-pointer">
+            <div
+              class="relative bg-color-secondary inline-block px-6 py-3 rounded-lg cursor-pointer">
+                <p class="text-6xl custom-after2">2</p>
+            </div>
+
+            <h3 class="text-xl font-bold py-4">Setup Your Profile</h3>
+            <p class="leading-relaxed">We use an appliation designed a testing gnose to keep away.</p>
+          </div>
+
+          <div class="text-center cursor-pointer">
+            <div
+              class="relative bg-color-primary-dark inline-block px-6 py-3 rounded-lg cursor-pointer hover:bg-color-secondary ease-in duration-200">
+              <p class="text-6xl">3</p>
+            </div>
+
+            <h3 class="text-xl font-bold py-4">Enjoy The Features</h3>
+            <p class="leading-relaxed">We use an appliation designed a testing gnose to keep away.</p>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">What Our Users Say</h4>
+          <h2 class="title">Our Testimonials</h2>
+        </div>
+
+        <div class="mt-8">
+          <div class="flex items-center justify-center flex-wrap">
+            <img src="./assests/user1.jpg" alt="user" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
+            <img src="./assests/user2.jpg" alt="user" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
+            <img src="./assests/user3.jpg" alt="user" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
+            <img src="./assests/user4.jpg" alt="user" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
+            <img src="./assests/user5.jpg" alt="user" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic">
+          </div>
+          
+          <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+
+          <div class="user-text">
+            <p class="md:text-2xl mb-6">"This should be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+            <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
+            <p>IOS Developer</p>
+          </div>
+
+          <div class="user-text">
+            <p class="md:text-2xl mb-6">"This should be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+            <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
+            <p>Flutter Developer</p>
+          </div>
+
+          <div class="user-text">
+            <p class="md:text-2xl mb-6">"This should be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+            <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
+            <p>Android Developer</p>
+          </div>
+
+          <div class="user-text">
+            <p class="md:text-2xl mb-6">"This should be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+            <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
+            <p>JS Developer</p>
+          </div>
+
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="bg-color-primary-dark">
+        <div class="container py-10">
+          <div class="grid gap-10 md:grid-cols-3 pb-10">
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">About App</h4>
+              <p class="leading-relaxed">Connect with us on social media to stay updated with the latest news, promotions, and events. Follow us on Facebook, Twitter, Instagram, and LinkedIn for exclusive content, insights, and more. Join our online community and be a part of the conversation!</p>
+              <div class="flex gap-5 items-center">
+                <p>Follow Us</p>
+                <i class="fa-brands fa-facebood-f cursor-pointer hover:text-color-secondary"></i>
+                <i class="fa-brands fa-twitter cursor-pointer hover:text-color-secondary"></i>
+                <i class="fa-brands fa-youtube cursor-pointer hover:text-color-secondary"></i>
+                <i class="fa-brands fa-instagram cursor-pointer hover:text-color-secondary"></i>
+              </div>
+            </div>
+
+            <div class="flex justify-between md:justify-around">
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Quick Links</h4>
+                <ul class="space-y-3">
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Home</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Features</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Pricing</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Blog</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Contact</a></li>
+                </ul>
+              </div>
+
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Help</h4>
+                <ul class="space-y-3">
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">About Us</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Partners</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Reviews</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Careers</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Terms & Conditions</a></li>
+                  <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Help</a></li>
+                </ul>
+              </div>
+
+
+            </div>
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">Newsletter</h4>
+              <p class="leading-relaxed">Subscribe us</p>
+              <div class="flex items-center">
+                <input type="text" class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
+                <button type="submit" class="bg-color-secondary px-4 py-2 lg:px-4 lg:py-3 rounded-r-md hover:opacity-90">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+          
+          </div>
+          <div class="flex justify-center pt-10 border-t border-color-gray">
+            <p>2023 &copy LightCode. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    //mobile menu
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+    const hLink = document.querySelector("#hLink");
+    const faSolid = document.querySelector(".fa-solid");
+
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+      faSolid.classList.toggle("fa-xmark");
+    });
+
+    hLink.forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        faSolid.classList.toggle("fa-xmark");
+      });
+    });
+
+    //testimonials
+  </script>
+</body>
+
+</html>
