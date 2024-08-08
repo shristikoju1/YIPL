@@ -1,0 +1,18 @@
+{
+  "name": "05css-flexbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "sass": "sass src/scss:src/css --watch",
+        "build": "npm run sass && other-build-commands"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

@@ -1,0 +1,284 @@
+$gap: 4vh;
+$padding: 4vh;
+$color: #48cae4;
+$bp: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1440px,
+);
+@mixin query($display) {
+  @each $key, $value in $bp {
+    //  defining max-width
+    @if ($display == $key) {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  body {
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 45px;
+
+    .container-one {
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+      padding: $padding;
+      border: 1vh solid $color;
+
+      [class^="block-"] {
+        display: flex;
+        flex-direction: row;
+
+        //Removing border(1vh+1vh), gap, & padding from the height
+        // And then equally distributing spaces between the
+        // .block-* classes by dividing it by 3
+        // height: (100vh-2vh -$gap * 2-$padding * 2) / 3;
+        gap: $gap;
+        height: 150px;
+
+        [class ^="box-"]{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: skyblue;
+          flex-basis: (100%)/3;
+          border: 2px solid black;
+          border-radius: 10px;
+          color: purple;
+        }
+
+
+      }
+    }
+
+    .container-two{
+      font-size: 35px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: $padding;
+      border: 1vh solid $color;
+
+      @include query(tablet){
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        gap: $gap;
+      }
+    }
+
+    .container-three{
+      display: flex;
+      gap: $gap;
+      padding: $padding;
+      background-color: pink;
+
+      @include query(mobile){
+        flex-direction: column;
+      }
+
+      [class ^="sidebar-"]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid $color;
+        height: 75vh;
+
+        @include query(mobile){
+          height: 50vh -$padding*2;
+        }
+
+      
+      }
+      .sidebar-1{
+        flex-grow: 2;
+      }
+      .sidebar-2{
+        flex-grow: 8;
+      }
+    }
+
+    .container-four{
+      display: flex;
+      flex-direction: column;
+      padding: $padding;
+      gap: $gap;
+
+      [class ^="row-"]{
+        display: flex;
+        gap: $gap;
+        height: (100vh - $gap*2 - $padding*2)/3;
+
+        @include query(mobile){
+          flex-direction: column;
+        }
+      }
+
+      [class ^="card-"]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        border: 2px solid $color;
+        border-radius: 10px;
+        color: white;
+        height: 100%;
+      }
+
+      .card-1{
+        flex-basis: 100%;
+      }
+
+      .card-2, .card-5{
+        flex-basis: 70%;
+      }
+      .card-3, .card-4{
+        flex-basis: 30%;
+      }
+
+      @include query(mobile){
+        .row-2{
+          // height: (100vh*2)/3;
+           //66.66vh
+        }
+        .row-3{
+          flex-direction: row;
+        }
+        .card-2,.card-3,.card-4,.card-5{
+          flex-basis: 50%;
+        }
+
+      }
+    }
+
+  //   .container-five{
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: $gap;
+  //     padding: $padding;
+
+  //     [class ^="layout-"]{
+  //       display: flex;
+  //       gap: $gap;
+  //       padding: $padding;
+
+  //       [class ^="grail-"]{
+  //         display: flex;
+  //         justify-content: center;
+  //         align-items: center;
+  //         border: 1vh solid $color;
+  //         border-radius: 10px;
+
+  //       }
+        
+  //       .grail-1, .grail-5{
+  //         flex-basis: 100%;
+  //         height: 20vh;
+  //       }
+
+  //       .grail-3{
+  //         flex-basis: 60%;
+  //         height: calc(60vh - #{$gap * 2} - #{$padding * 2});
+  //       }
+
+  //       .grail-2, .grail-4{
+  //         flex-basis: 20%;
+  //       }
+  //     }
+
+  //     @include query(mobile){
+
+  //       .layout-2{
+  //         flex-direction: column;
+  //         gap: $gap;
+
+          
+  //       .grail-2{
+  //         display: none;
+  //       }
+  //       .grail-3{
+  //         flex-basis: 80%;
+  //         background: #000;
+  //         color: aliceblue;
+  //       }
+  //       }
+        
+      
+        
+  //   }
+  // }
+  .container-five {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    padding: $padding;
+  
+    [class^="layout-"] {
+      display: flex;
+      gap: $gap;
+      padding: $padding;
+  
+      [class^="grail-"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1vh solid $color;
+        border-radius: 10px;
+      }
+  
+      .grail-1, .grail-5 {
+        flex-basis: 100%;
+        height: 20vh;
+      }
+  
+      .grail-3 {
+        flex-basis: 60%;
+        height: calc(60vh - #{$gap * 2} - #{$padding * 2});
+      }
+  
+      .grail-2, .grail-4 {
+        flex-basis: 20%;
+      }
+    }
+  
+    @include query(mobile) {
+      .layout-2 {
+        flex-direction: column;
+        gap: $gap;
+  
+        .grail-2 {
+          display: none;
+        }
+        .grail-3 {
+          flex-basis: unset;
+          background: #000;
+          color: aliceblue;
+        }
+        .grail-4{
+          color: pink;
+          flex-basis: 100%;
+          height: 10vh;
+          background: #000;
+        }
+      }
+      .layout-3 .grail-5{
+        // height: 30vh;
+        
+        height: unset;
+        // background: silver;
+      }
+    }
+  }
+  
+}
+}

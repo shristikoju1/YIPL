@@ -1,0 +1,61 @@
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 1; /*infinite is also allowed */
+  animation-direction: alternate;
+  /* animation-timing-function: ease-in-out; */
+  margin: 10px;
+}
+
+.div1{
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+}
+.div2{
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.div3{
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+.div4{
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+    border-radius: 50%;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+    border-radius: 0%;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+    border-radius: 50%;
+  }
+  100% {
+    background-color: rgb(192, 232, 255);
+    right: 0px;
+    top: 0px;
+  }
+}

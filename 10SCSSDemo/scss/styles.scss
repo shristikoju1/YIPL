@@ -1,0 +1,16 @@
+@import "variables";
+@import "lists";
+@import "headings";
+
+body{
+    background-color: $gray;
+    padding: 40px;
+}
+
+div{
+    background-color:#fff ;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+    
+}

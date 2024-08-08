@@ -1,0 +1,54 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*instead of '1fr 1fr 1fr 1fr 1fr' for 5 columns */
+    grid-gap: 0.5rem;
+    grid-template-areas:
+    "A A A B E"
+    "C D D B F";
+}
+
+div {
+    background: gainsboro;
+    padding: 1em;
+}
+
+.a{
+    grid-area: A;
+    background: pink;
+    content: "Area A";
+}
+
+.b{
+    grid-area: B;
+    background: lightblue;
+    content: "Area B";
+}
+
+.c{
+    grid-area: C;
+    background: lightgreen;
+    content: "Area C";
+}
+.d{
+    grid-area: D;
+    background: yellow;
+    content: "Area D";
+}
+
+.e{
+    grid-area: E;
+    background: lightcoral;
+    content: "Area E";
+}
+
+.f{
+    grid-area: F;
+    background: purple;
+    content: "Area F";
+}
+
+.cell{
+    background: black;
+    color: white;
+}
