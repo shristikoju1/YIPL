@@ -1,0 +1,255 @@
+nav {
+  background-color: $white;
+  width: 100vw;
+  position: fixed;
+  z-index: 10001;
+  box-shadow: 0 2px 4px rgb(212, 212, 212);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .navbar {
+    @include responsive-max-width;
+    @include flex-center(row, space-between, center);
+    width: 100%;
+    z-index: 100;
+
+    .menu-left {
+      @include flex-center(row, flex-start, center);
+      gap: $gap-xl;
+
+      img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 32px;
+      }
+
+      ul {
+        width: 100%;
+        @include flex-center(row, flex-start, center);
+        gap: $gap-lg;
+
+        li {
+          list-style-type: none;
+          @include text-styles(
+            $font-weight-medium,
+            $font-size-small,
+            $line-height-base,
+            $white
+          );
+
+          a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            color: $black;
+            transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+              color: $yellow;
+              transform: translateY(-5px);
+              box-shadow: 0 3px 0 0 rgba(99, 99, 99, 0.322);
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-right {
+      @include flex-center(row, flex-end, center);
+      gap: $gap-xl;
+
+      p {
+        @include text-styles($font-weight-medium);
+
+        a {
+          display: inline-block;
+          width: 100%;
+          text-decoration: none;
+          color: $black;
+          transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+          &:hover {
+            color: $yellow;
+            transform: translateY(-5px);
+            box-shadow: 0 3px 0 0 rgba(99, 99, 99, 0.322);
+            background-color: transparent;
+          }
+        }
+      }
+      
+      .signup-btn {
+        @include button-styles;
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+      }
+      
+      .signup-btn::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $yellow;
+        color: $black;
+        transition: transform 0.3s ease;
+        z-index: -1;
+      }
+
+      .signup-btn::after{
+        color: $black;
+      }
+      
+      .signup-btn:hover{
+        color: $black;
+
+      
+      &::before {
+        transform: translateY(-100%);
+        
+      }
+    }
+    }
+
+    .hamburger {
+      @include flex-center(row, center, center);
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      z-index: 101;
+      display: none;
+
+      @media (max-width: 900px) {
+        .navbar {
+          margin-top: 0 auto;
+          padding: 0 auto;
+
+          .menu-left ul li {
+            display: none;
+          }
+
+          .menu-right p,
+          .menu-right {
+            display: block;
+            .hamburger {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 2000;
+  background-color: rgba(255, 255, 255, 0.694);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba($color: $black, $alpha: 0.1);
+  @include flex-center(column, flex-start, flex-start);
+  display: none;
+
+  .menu-left {
+    @include flex-center(column, center, center);
+    gap: $gap-xl;
+    margin-right: 32px;
+
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 96px;
+      height: 32px;
+    }
+
+    ul li {
+      width: 100%;
+      list-style-type: none;
+
+      a {
+        width: 100%;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 965px) {
+  .navbar {
+    height: 60px;
+    padding: 20px auto;
+
+    .menu-left ul li {
+      display: none;
+    }
+
+    .menu-right p,
+    .signup-btn a {
+      display: none;
+    }
+
+    .menu-right {
+      .hamburger {
+        display: block;
+        z-index: 4000;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: $padding-base;
+    height: auto;
+  }
+
+  .menu-left,
+  .menu-right {
+    flex-direction: column;
+    gap: $gap-base;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-left ul {
+    flex-direction: column;
+    gap: $gap-base;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-left,
+  .menu-right {
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-left ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
