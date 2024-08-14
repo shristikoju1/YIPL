@@ -4,7 +4,7 @@ const myArray = [1, 2, 3, 4, 5, 4, 5, 3,2, 8];
 console.log(myArray);
 
 const mySet = new Set(myArray);
-console.log(mySet);
+console.log(mySet); // output: Set(6) { 1, 2, 3, 4, 5, 8 } (stores unique values)
 
 const uniqueArray = [...mySet];
 console.log(uniqueArray);
@@ -23,7 +23,7 @@ const b = {};
 const myMap = new Map(
     [[a, 1], [b, 2], ['c', 3]]
 );
-console.log(myMap);
+console.log(myMap); // output: Map(3) { {} => 1, {} => 2, 'c' => 3 } (stores key-value pairs)
 
 myMap.set('d', 10);
 // myMap.clear();
