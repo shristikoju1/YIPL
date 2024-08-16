@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form name="RegForm" id="regForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <span id="name-error" class="error-message"></span>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+            <span id="email-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <span id="password-error" class="error-message"></span>
+        </div>
+
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address">
+            <span id="address-error" class="error-message"></span>
+        </div>
+
+        <div>
+            <label for="subject">Select Your Course:</label>
+            <select id="subject" name="subject">
+                <option value="">Select Course</option>
+                <option value="BTECH">BTECH</option>
+                <option value="BBA">BBA</option>
+                <option value="BCA">BCA</option>
+                <option value="B.COM">B.COM</option>
+            </select>
+            <span id="subject-error" class="error-message"></span>
+        </div>
+        <div>
+            <label for="comment">College Name:</label>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" id="agree" name="agree" />
+            <label for="agree">I agree to the above information</label>
+            <span id="agree-error" class="error-message"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit" name="Submit" id="submit"/>
+            <input type="reset" value="Reset" name="Reset" />
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
