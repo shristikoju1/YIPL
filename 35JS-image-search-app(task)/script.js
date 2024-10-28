@@ -10,37 +10,36 @@ let inputData = "";
 let page = 1;
 
 // Debounce function to limit how often the callback function is called
-// let button = document.getElementById("search-btn");
-// const debounce = (func, delay) => {
-//     let debounceTimer
-//     return function () {
-//         const context = this
-//         const args = arguments
-//         clearTimeout(debounceTimer)
-//         debounceTimer
-//             = setTimeout(() => func.apply(context, args), delay)
-//     }
-// }
-//     button.addEventListener('click', debounce(function () {
-// }, 3000));
+const debounce = (func, delay) => {
+    let debounceTimer
+    return function () {
+        const context = this
+        const args = arguments
+        clearTimeout(debounceTimer)
+        debounceTimer = setTimeout(() => func.apply(context, args), delay)
+    }
+}
 
- 
 // API fetch function
 const searchImages = async () => {
+    console.log('function called')
     inputData = inputElement.value; 
+    debounceKeyword.textContent = inputData;
+
     if (!inputData.trim()) {
         alert('Please enter a search term!');
         return;
     }
     
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
-
+ 
     try {
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log(data,'data')
         const results = data.results;
 
         if (page === 1) {
@@ -51,6 +50,8 @@ const searchImages = async () => {
             alert('No images found!');
             return;
         }
+      
+
 
         results.forEach(result => {
             const imageWrapper = document.createElement('div');
@@ -76,6 +77,8 @@ const searchImages = async () => {
     }
 };
 
+
+
 // Event listeners for form submission and "See more" button
 formElement.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -85,4 +88,11 @@ formElement.addEventListener('submit', (event) => {
 
 seeMore.addEventListener('click', () => {
     searchImages();
+});
+
+const debouncedSearchImages = debounce(searchImages, 1000);
+
+inputElement.addEventListener('input', () => {
+    page = 1;
+    debouncedSearchImages();
 });
